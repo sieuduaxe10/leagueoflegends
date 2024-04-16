@@ -11,7 +11,7 @@ import AD from '../assets/img/Ad.jpg';
 import Sp from '../assets/img/Sp.jpg';
 
 function Header(props) {
-
+// "https://translate.google.com/translate?hl=en&sl=vi&tl=en&u="
     function chuyendoi() {
         var googleTranslateURL = 'git init' + window.location.href;
         window.open(googleTranslateURL, '_blank');
