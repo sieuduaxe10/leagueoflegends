@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css.css';
 import huy1 from '../../assets/img/h1.jpg';
 
-import huy from '../../assets/img/lol1.gif';
+import huy from '../../assets/img/kaisss.gif';
 import face from '../../assets/icon/face.png';
 import gg from '../../assets/icon/gg.png';
 import int from '../../assets/icon/int.png';

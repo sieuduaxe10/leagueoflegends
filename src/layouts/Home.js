@@ -7,13 +7,12 @@ import Slider from "../pages/home/Slider";
 
 
 
-
 function Home(props) {
     return (
         
         <div class="container"> 
         <Slider/>
-  
+     
         <Section1/>
        
         </div>

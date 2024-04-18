@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import huy from '../../assets/img/lol.gif';
+import huy from '../../assets/img/camile.gif';
+
+
 import { Link } from 'react-router-dom';
 import { FaSignInAlt } from 'react-icons/fa'; // Import the icon component
 
@@ -102,7 +104,7 @@ const Login = () => {
 
 
             <div>
-              <Link to={"/"} type="submit" className={`btn btn-primary ${hasInput ? 'active' : ''}`} style={{ textAlign: 'center', width: '50%', marginLeft: '60px', marginTop: '30px' }}>
+              <Link  to={"/login"} type="submit" className={`btn btn-primary ${hasInput ? 'active' : ''}`} style={{ textAlign: 'center', width: '50%', marginLeft: '60px', marginTop: '30px' }}>
                 <FaSignInAlt style={{ verticalAlign: 'middle' }} />
               </Link>
             </div>

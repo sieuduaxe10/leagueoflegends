@@ -1,0 +1,34 @@
+#j {
+    width: 100%;
+    height: 100%;
+  
+    background: #000000;
+    --gap: 5em;
+    --line: 1px;
+    --color: rgba(255, 255, 255, 0.2);
+  
+    background-image: linear-gradient(
+        -90deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+      ),
+      linear-gradient(
+        0deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+      );
+    background-size: var(--gap) var(--gap);
+  }
+  /* Thay đổi hình ảnh của phần tử có ID "re" */
+#footer {
+  /* Đặt hình ảnh làm nền cho phần tử */
+  background-image: url('../assets/img/camile.gif');
+  /* Các thuộc tính CSS khác bạn muốn áp dụng cho phần tử */
+  width: 100%;
+  height: 100%;
+  /* Bạn có thể điều chỉnh thêm các thuộc tính khác như:
+     background-size, background-repeat, background-position */
+  background-size: cover; /* Để hình ảnh phù hợp với kích thước phần tử */
+}

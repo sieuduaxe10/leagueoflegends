@@ -1,0 +1,84 @@
+.rating-wrap:not(:checked) > input {
+    position: absolute;
+    appearance: none;
+  }
+  
+  .rating-wrap:not(:checked) > label {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    color: #666;
+    
+  }
+  .rating-wrap{
+    display: inline-block;
+
+  }
+  
+  .rating-wrap:not(:checked) > label:before {
+    content: "★";
+  }
+  
+  .rating-wrap > input:checked + label:hover,
+  .rating-wrap > input:checked + label:hover ~ label,
+  .rating-wrap > input:checked ~ label:hover,
+  .rating-wrap > input:checked ~ label:hover ~ label,
+  .rating-wrap > label:hover ~ input:checked ~ label {
+    color: #e58e09;
+  }
+  
+  .rating-wrap:not(:checked) > label:hover,
+  .rating-wrap:not(:checked) > label:hover ~ label {
+    color: #ff9e0b;
+  }
+  
+  .rating-wrap > input:checked ~ label {
+    color: #ffa723;
+  }
+  .input-group-prepend,
+.input-group-append {
+    flex: 0 0 auto; /* Đảm bảo chúng không co giãn */
+}
+
+.input-spinner {
+    display: flex; /* Hiển thị các phần tử theo hàng ngang */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+}
+.input-group {
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+}
+.button-container button {
+    margin-right: 20px; /* Khoảng cách giữa các nút */
+    
+}
+.button-container button {
+    transition: transform 0.3s ease; /* Tạo hiệu ứng chuyển động mượt mà */
+}
+
+.button-container button:focus {
+    z-index: 1; /* Đặt chỉ số z cao hơn cho nút được nhấn */
+    transform: scale(1.2); /* Phóng to nút được nhấn */
+}
+.effect-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Đổ bóng */
+  }
+  #huy{
+    animation: tilt 1s infinite;
+    }
+    @keyframes tilt {
+      0% {
+          background-color: aqua;
+      }
+      50% {
+         background-color: yellow;
+      }
+      100% {
+         background-color: darkorange;
+      }
+    }
+

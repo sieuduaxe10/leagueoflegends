@@ -7,23 +7,12 @@ function Footer() {
     return (
 
         <footer className="section-footer" style={{ backgroundColor: '#D8BFD8' }}>
-            <div className="video-container">
-                <iframe
-                    width="560"
-                    height="300"
-                    src="https://www.youtube.com/embed/61-_LlRLSPA"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                ></iframe>
-            </div>
+            
 
 
-            <div className="container-fluid text-white-50 footer pt-5 mt-5">
-                {/* rest of your footer content */}
-            </div>
 
-            <div className="container-fluid text-white-50 footer pt-5 mt-5">
+
+            <div id='footer' className="container-fluid text-white-50 footer pt-5 ">
                 <div className="container py-5">
                     <div className="pb-4 mb-4" style={{ borderBottom: '1px solid rgba(226, 175, 24, 0.5)' }}>
                         <div className="row g-4">
