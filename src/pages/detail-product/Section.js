@@ -63,7 +63,7 @@ const Section = () => {
         <div className="col-md-7">
         <h1 className='effect-text' style={{ textTransform: 'uppercase',color: 'white' }}>KỸ NĂNG</h1>
           <div style={{ marginTop: '20px' }}>
-            <div className="button-container">
+            <div style={{marginLeft:'35px'}} className="button-container">
               <button onClick={() => handleImageClick('image1')}>
                 <img style={{ width: '100px', height: '100px' }} src={Aatrox_Passive} alt="Image 1" />
               </button>

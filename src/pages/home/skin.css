@@ -1,0 +1,58 @@
+/* Định nghĩa hoạt cảnh */
+@keyframes fadeEffect {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+#hinh {
+    background-image: url('../../assets/img/gg.gif');
+    background-size: cover; /* Điều chỉnh kích thước của hình nền */
+    background-position: center; /* Căn chỉnh hình nền ở giữa */
+    background-repeat: no-repeat; /* Đảm bảo hình nền không lặp lại */
+}
+
+
+/* Áp dụng hoạt cảnh cho ảnh */
+.image {
+    animation: fadeEffect 1s infinite alternate;
+    width: 200px; /* Điều chỉnh kích thước ảnh */
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Căn giữa ảnh */
+    transform: rotate(-15deg); /* Xoay khung theo góc 15 độ */
+
+}
+.image.image {
+    opacity: 1; /* Hiển thị ảnh với độ mờ 1 */
+}
+
+/* Tùy chỉnh bố cục */
+.Skin {
+    text-align: center;
+}
+/* Định nghĩa keyframes cho hiệu ứng chuyển động màu sắc */
+@keyframes borderColorChange {
+    0% {
+        border-color: #fef08a; /* Màu khung bắt đầu là xám nhạt */
+    }
+    50% {
+        border-color: #a5f3fc
+        ; /* Chuyển sang màu đỏ ở giữa */
+    }
+    100% {
+        border-color: #ccc; /* Trở lại màu xám nhạt */
+    }
+}
+
+/* Định nghĩa cho lớp .image-wrapper */
+.image-wrapper {
+    /* Định nghĩa khung xung quanh hình ảnh */
+    border: 4px solid #ccc; /* Mặc định khung có màu xám nhạt */
+    border-radius: 6%; /* Tùy chọn, tạo góc bo tròn */
+    padding: 6px; /* Khoảng trống giữa hình ảnh và khung */
+    width: 65%; /* Đặt chiều rộng cho khung */
+    margin: 0 auto; /* Căn giữa khung trong khối chứa */
+    transform: rotate(15deg); /* Xoay khung theo góc 15 độ */
+
+    /* Áp dụng hiệu ứng chuyển động màu sắc */
+    animation: borderColorChange 3s infinite; /* Chạy hiệu ứng mỗi 3 giây và lặp lại vô hạn */
+}

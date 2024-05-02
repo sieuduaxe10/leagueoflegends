@@ -5,7 +5,6 @@
 
 /* Đảm bảo header không bị che phủ bởi main */
 .header {
-  position: fixed; /* Đặt header ở vị trí cố định */
   top: 0; /* Header nằm ở đỉnh trang */
   left: 0;
   right: 0;

@@ -9,13 +9,17 @@ import Rung from '../assets/img/Rung.jpg';
 import Mid from '../assets/img/Mid.jpg';
 import AD from '../assets/img/Ad.jpg';
 import Sp from '../assets/img/Sp.jpg';
-
+import 'animate.css';
 function Header(props) {
 // "https://translate.google.com/translate?hl=en&sl=vi&tl=en&u="
-    function chuyendoi() {
-        var googleTranslateURL = 'git init' + window.location.href;
-        window.open(googleTranslateURL, '_blank');
-    }
+function chuyendoi() {
+    // URL cơ bản của Google Translate với tham số ngôn ngữ và URL của trang web hiện tại
+    var googleTranslateURL = 'https://translate.google.com/translate?hl=en&sl=vi&tl=en&u=' + window.location.href;
+    
+    // Mở URL Google Translate trong tab mới
+    window.open(googleTranslateURL, '_blank');
+}
+
     
     
     return (
@@ -47,7 +51,7 @@ function Header(props) {
 
                             <div className="collapse navbar-collapse " id="navbarCollapse">
                                 <div className="navbar-nav mx-auto">
-                                    <a href="index.html" className="nav-item nav-link active">Home</a>
+                                    <a href="/" className="nav-item nav-link active">Home</a>
 
                                     <a onClick={chuyendoi}  className="nav-item nav-link">Shop Detail</a>
                                     <div className="nav-item dropdown">

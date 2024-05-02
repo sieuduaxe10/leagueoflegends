@@ -9,13 +9,9 @@ import './box.css'
 function Detail(props) {
     return (
         <>
-        <div  class="container"> 
        
-        <Content/>
-        
-   
-            </div>
             <div id="j" className="box" >
+            <Content/>
                 <Section/>
           
             </div>

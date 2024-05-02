@@ -82,3 +82,32 @@
       }
     }
 
+    .form-container {
+      width: 80%; /* Đặt chiều rộng của khung form nhỏ hơn */
+      border: 1px solid #ccc; /* Đường viền cho khung lớn */
+      border-radius: 4px; /* Làm tròn góc của khung */
+      padding: 10px; /* Khoảng đệm bên trong */
+      margin: 20px auto; /* Căn giữa khung form */
+  }
+  
+  .form-column {
+      display: flex;
+      justify-content: space-between; /* Đặt các cột xa nhau */
+  }
+  
+  .left-column,
+  .right-column {
+      flex: 1; /* Mỗi cột chiếm một nửa chiều rộng của khung */
+      padding: 10px; /* Thêm khoảng đệm bên trong cột */
+  }
+  
+  .left-column {
+      border-right: 1px solid #ccc; /* Đường kẻ giữa ở bên phải cột trái */
+  }
+  
+  .right-column {
+      padding-left: 10px; /* Khoảng cách giữa hai cột */
+  }
+  
+  
+  
