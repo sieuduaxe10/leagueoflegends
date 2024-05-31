@@ -2,6 +2,7 @@ import React from "react";
 import Threejs from "../home/3d"; // Import component for 3D rendering
 import "./Slider.css"; // Import your CSS file
 import Hinh from "../../assets/img/hq.png";
+import { Link } from "react-router-dom";
 const Slider = () => {
   const power = 50; // Giá trị sức mạnh (đây chỉ là ví dụ, bạn có thể lấy giá trị này từ trạng thái của thành phần)
   const powerr = 75;
@@ -26,34 +27,34 @@ const Slider = () => {
   };
 
   return (
-    <section className="section-main">
-      <main className="card">
-        <div className="container-fluid py-5 hero-header">
+ 
+   
+        <section className="container-fluid py-5 hero-header">
           <div className="container py-5">
             <div className="row g-5 align-items-center">
               {/* Phần 1 */}
-              <div className="col-md-3">
+              <div  className="col-md-3">
 
               
                   <img src={Hinh} alt="Logo" className="logo-image" />
               
 
-                <div>
-                  <div class="button-container">
-                    <a  href="/register">
+                <div >
+                  <div  class="button-container">
+                    <Link  to="/register">
                     <button class="button">
                       <div class="button__int">
                         <span class="button__span">Đăng Kí</span>
                       </div>
                     </button>
-                    </a>
-                    <a href="/login">
+                    </Link>
+                    <Link to="/login">
                     <button  class="button">
                       <div class="button__int">
                         <span class="button__span">Đăng Nhập</span>
                       </div>
                     </button>
-                    </a>
+                    </Link>
                   </div>
 
 
@@ -95,9 +96,8 @@ const Slider = () => {
               </div>
             </div>
           </div>
-        </div>
-      </main>
-    </section>
+        </section>
+    
   );
 };
 

@@ -49,7 +49,7 @@
     border: 4px solid #ccc; /* Mặc định khung có màu xám nhạt */
     border-radius: 6%; /* Tùy chọn, tạo góc bo tròn */
     padding: 6px; /* Khoảng trống giữa hình ảnh và khung */
-    width: 65%; /* Đặt chiều rộng cho khung */
+    width: 55%; /* Đặt chiều rộng cho khung */
     margin: 0 auto; /* Căn giữa khung trong khối chứa */
     transform: rotate(15deg); /* Xoay khung theo góc 15 độ */
 

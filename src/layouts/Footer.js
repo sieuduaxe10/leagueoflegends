@@ -2,6 +2,7 @@ import React from 'react';
 import "./Footer.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import Logo from '../assets/img/Lo.png';      
 
 function Footer() {
     return (
@@ -19,13 +20,8 @@ function Footer() {
                             <div className="col-lg-3">
                                 <a href="#">
                                     <div id='huyt' class="pyramid-loader">
-                                        <div class="wrapper">
-                                            <span class="side side11"></span>
-                                            <span class="side side21"></span>
-                                            <span class="side side31"></span>
-                                            <span class="side side41"></span>
-                                            <span class="shadow"></span>
-                                        </div>
+                                    <img style={{ height: '100px', width: '120px',backgroundImage:'none' }} src={Logo} alt="Logo" />
+
                                     </div>
                                 </a>
                             </div>

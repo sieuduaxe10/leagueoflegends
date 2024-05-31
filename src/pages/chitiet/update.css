@@ -1,0 +1,22 @@
+#update {
+    position: relative;
+    background-image: url('../../assets/img/up1.jpg');
+    background-size: cover; /* Đảm bảo hình nền nằm vừa với kích thước phần tử */
+    background-position: center; /* Căn chỉnh hình nền ở giữa */
+}
+
+#update::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Màu mờ, bạn có thể điều chỉnh giá trị rgba để thay đổi độ mờ và màu sắc */
+    z-index: 1; /* Đảm bảo lớp mờ hiển thị phía trên phần nội dung */
+}
+
+.container {
+    position: relative;
+    z-index: 2; /* Đảm bảo phần nội dung hiển thị phía trên lớp mờ */
+}

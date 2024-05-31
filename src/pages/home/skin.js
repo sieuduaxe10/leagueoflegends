@@ -4,6 +4,7 @@ import akali1 from "../../assets/img/akali.png";
 import akali2 from "../../assets/img/akali1.png";
 import akali3 from "../../assets/img/akali2.png";
 import akali4 from "../../assets/img/akali3.png";
+import 'animate.css';
 
 const Skin = () => {
     // Mảng chứa các đường dẫn hình ảnh
@@ -23,10 +24,10 @@ const Skin = () => {
     }, [images.length]);
 
     return (
-        <div id='hinh' className="container py-5">
+        <div id='hinh' className="container-fluid py-5">
             <div className="row">
                 <div class="col-md-1" style={{ fontFamily: 'Georgia', marginTop: '200px',transform: 'rotate(0deg)' }}>
-                    <p style={{ opacity: 0.5 ,color: 'white', fontSize: '18px' , writingMode: 'vertical-lr'}}>
+                    <p style={{ color: 'white', fontSize:'larger' , writingMode: 'vertical-lr',fontWeight: 'bold'}}>
                         Trang Phục Tướng 
                     </p>
                 </div>
@@ -42,13 +43,13 @@ const Skin = () => {
                     <div style={{ marginTop: '200px' }} class="style__Wrapper-sc-1h71ys8-0 llIKGT style__Title-sc-vkf2l4-5-GiantTitle linpox">
                         <h1 class="style__Heading-sc-1h71ys8-1 hnjwWN">
                             <span class="style__Intro-sc-1h71ys8-2 gOOvFJ">
-                                <div class="style__RevealWrapper-sc-14kr0ky-0 jyUXlJ inline show-nw"
+                                <div class="logo animate__animated animate__slideInLeft"
                                 >
                                     <span data-testid="championstyle:subtitle">Hạ Gục Kẻ Địch</span>
                                 </div>
                             </span>
                             <strong class="style__Title-sc-1h71ys8-3 fUnKYe">
-                                <div class="style__RevealWrapper-sc-14kr0ky-0 jyUXlJ inline show-se"
+                                <div class="logo animate__animated animate__slideInRight"
                                 >
                                     <span style={{ fontSize: '50px' }} data-testid="championstyle:title">Một Cách Sang Chảnh</span>
                                 </div>

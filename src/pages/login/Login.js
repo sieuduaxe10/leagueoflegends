@@ -45,9 +45,9 @@ const Login = () => {
       <div className="col-md-3">
         <div className="login-form">
           <div style={{ marginBottom: '20px', textAlign: 'center' }}>
-            <a href="/" className="brand-wrap">
+            <Link to="/" className="brand-wrap">
               <img style={{ width: '200px', height: '300px' }} className="logo animate__animated animate__backInDown" src={Logo} alt="Logo" />
-            </a>
+            </Link>
           </div>
           <h1 style={{ textAlign: 'center', marginBottom: '20px', fontWeight: 'bold' }}>Đăng nhập</h1>
           <form onSubmit={handleLogin} style={{ marginBottom: '20px' }}>
@@ -91,9 +91,9 @@ const Login = () => {
             </div>
           </form>
           <div className="additional-links" style={{ textAlign: 'center', marginBottom: '20px' }}>
-            <a href="#" style={{ fontWeight: 'bold', color: 'black', marginRight: '10px' }}>Quên mật khẩu?</a>
+            <Link to="#" style={{ fontWeight: 'bold', color: 'black', marginRight: '10px' }}>Quên mật khẩu?</Link>
             <span className="separator">|</span>
-            <a href="/register" style={{ fontWeight: 'bold', color: 'black', marginLeft: '10px' }}>Tạo tài khoản</a>
+            <Link to="/register" style={{ fontWeight: 'bold', color: 'black', marginLeft: '10px' }}>Tạo tài khoản</Link>
           </div>
           <div className="text-container" style={{ textAlign: 'center' }}>
             <p className="text">

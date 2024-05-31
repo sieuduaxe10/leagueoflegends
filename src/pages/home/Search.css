@@ -1,0 +1,77 @@
+.input-container {
+    width: 220px;
+    position: relative;
+  }
+  
+  .icon {
+    position: absolute;
+    right: 10px;
+    top: calc(50% + 5px);
+    transform: translateY(calc(-50% - 5px));
+  }
+  
+  .input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    transition: .2s linear;
+    border: 2.5px solid black;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .input:focus {
+    outline: none;
+    border: 0.5px solid black;
+    box-shadow: -5px -5px 0px black;
+  }
+  
+  .input-container:hover > .icon {
+    animation: anim 1s linear infinite;
+  }
+  
+  @keyframes anim {
+    0%,
+    100% {
+      transform: translateY(calc(-50% - 5px)) scale(1);
+    }
+  
+    50% {
+      transform: translateY(calc(-50% - 5px)) scale(1.1);
+    }
+  }
+  /* Định nghĩa lớp CSS cho col-md-3 và col-md-9 */
+  @keyframes borderColorChange {
+    0% {
+        border-color: #0d5996; /* Màu khung bắt đầu là xám nhạt */
+    }
+    50% {
+        border-color: #ab0e7f
+        ; /* Chuyển sang màu đỏ ở giữa */
+    }
+    100% {
+        border-color: #87af19; /* Trở lại màu xám nhạt */
+    }
+}
+#khung{
+    animation: borderColorChange 3s infinite; /* Chạy hiệu ứng mỗi 3 giây và lặp lại vô hạn */
+
+}
+#text{
+  width: 500px;
+  margin: auto;
+}
+.fruite-item {
+  position: relative;
+}
+
+.product-info {
+ margin-left: auto; 
+  transition: background-color 0.3s ease;
+}
+
+.fruite-img:hover + .product-info {
+  background-color: #10bbe1; /* Màu nền khi hover */
+
+}

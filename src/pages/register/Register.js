@@ -40,9 +40,9 @@ const Login = () => {
       <div className="col-md-3">
         <div id="login" className="login-form">
           <div style={{ marginBottom: '50px', textAlign: 'center', }} className="">
-            <a href="/" className="brand-wrap">
+            <Link to="/" className="brand-wrap">
               <img style={{ width: '200px', height: '300px' }} className="logo animate__animated animate__backInDown" src={Logo} alt="Logo" />
-            </a>
+            </Link>
           </div>
           <h1 style={{ textAlign: 'center', marginBottom: '20px', fontWeight: 'bold' }}>Đăng Kí</h1>
           <form onSubmit={handleLogin}>

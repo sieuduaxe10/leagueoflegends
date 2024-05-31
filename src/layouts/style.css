@@ -1,14 +1,16 @@
 @import '~@fortawesome/fontawesome-free/css/all.css';
 #back{
-  background-color: rgb(254 226 226);
+  background-color: rgb(12, 12, 12);
 }
 
 /* Đảm bảo header không bị che phủ bởi main */
 .header {
+  position: fixed; /* Đảm bảo header luôn hiển thị ở vị trí cố định trên màn hình */
   top: 0; /* Header nằm ở đỉnh trang */
   left: 0;
   right: 0;
-  z-index: 1; /* Đảm bảo header hiển thị trên các phần tử khác */
+  z-index: 1000; /* Đảm bảo header hiển thị trên các phần tử khác */
+  width: 100%; /* Chiều rộng của header sẽ bằng 100% của viewport */
 }
 
 .section-header {
@@ -36,7 +38,7 @@
 }
 
 .topbar {
-  background-color: rgb(216 180 254);
+  background-color: rgba(250, 249, 249, 0.89);
 
     color: #fff;
     padding: 10px 0;
@@ -169,4 +171,26 @@ span{
   }
   .widget-header {
     margin-right: 15px; /* Hoặc giá trị margin phù hợp */
+}
+@media (max-width: 768px) {
+    .navbar-collapse {
+        display: none;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .divider {
+        display: none;
+    }
 }

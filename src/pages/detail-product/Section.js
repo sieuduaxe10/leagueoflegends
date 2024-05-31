@@ -61,7 +61,7 @@ const Section = () => {
     <section className="section-name padding-y ">
       <div className="row">
         <div className="col-md-7">
-        <h1 className='effect-text' style={{ textTransform: 'uppercase',color: 'white' }}>KỸ NĂNG</h1>
+        <h1 className='effect-text' style={{ textTransform: 'uppercase',color: 'white',fontWeight: 'bold' }}>KỸ NĂNG</h1>
           <div style={{ marginTop: '20px' }}>
             <div style={{marginLeft:'35px'}} className="button-container">
               <button onClick={() => handleImageClick('image1')}>

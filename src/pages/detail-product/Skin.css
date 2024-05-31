@@ -1,0 +1,24 @@
+/* Phần này áp dụng cho phần tử có id là "play" */
+#pl {
+    display: flex; /* Hiển thị các phần tử bên trong "play" theo kiểu flexbox */
+    width: 600px; /* Đặt chiều rộng của phần tử "play" là 600px */
+    height: 430px; /* Đặt chiều cao của phần tử "play" là 430px */
+}
+
+/* Phần này áp dụng cho tất cả các hình ảnh bên trong "play" */
+#pl img {
+    width: 0px; /* Đặt chiều rộng ban đầu của các hình ảnh trong "play" là 0px */
+    flex-grow: 1; /* Cho phép hình ảnh mở rộng để lấp đầy không gian trống còn lại trong "play" */
+    object-fit: cover; /* Đảm bảo hình ảnh nằm trong kích thước của phần tử mà không bị biến dạng */
+    opacity: .5; /* Đặt độ mờ ban đầu của hình ảnh là 50% */
+    margin: 1%; /* Đặt khoảng cách giữa các hình ảnh là 1% của chiều rộng của "play" */
+    border-radius: 20px; /* Làm tròn các góc của hình ảnh với bán kính là 20px */
+    transition: all 0.5s ease; /* Tạo hiệu ứng chuyển động mềm mại cho tất cả các thuộc tính CSS trong 0.5 giây */
+}
+
+/* Phần này áp dụng cho các hình ảnh trong "play" khi di chuột qua */
+#pl img:hover {
+    width: 300px; /* Đặt chiều rộng của hình ảnh khi di chuột qua là 300px */
+    opacity: 1; /* Đặt độ mờ của hình ảnh khi di chuột qua thành 0, tức là không mờ */
+    filter: contrast(120%); /* Tăng độ tương phản của hình ảnh lên 120% khi di chuột qua */
+}
