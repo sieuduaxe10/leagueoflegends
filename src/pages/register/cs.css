@@ -7,8 +7,8 @@
     border: 1px solid #ccc;
   }
   
-  #login {
-    background-image: url('../../assets/img/kaisss.gif');
+  #Regis {
+    background-image: url('../../assets/img/camile.gif');
     background-size: cover; /* Đảm bảo kích thước hình nền được điều chỉnh để lấp đầy phần tử */
     background-position: center; /* Căn chỉnh hình nền vào giữa */
     background-repeat: no-repeat; /* Đảm bảo hình nền không được lặp lại */
@@ -53,7 +53,7 @@
 
   
   
-  .login-form {
+#Reg {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -68,13 +68,14 @@
     box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi kích thước ngoài cùng */
   }
   
-  .login-form:hover {
+#Reg:hover {
     background: linear-gradient(45deg, #dbeafe, #99f6e4);
   }
   
   @media screen and (max-width: 480px) {
-    .login-form {
+  #Reg {
       width: 90%; /* Thiết lập width là 90% khi độ rộng màn hình nhỏ hơn hoặc bằng 480px */
     }
   }
+  
   

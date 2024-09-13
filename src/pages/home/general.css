@@ -4,10 +4,15 @@
 }
 
 #hi {
-  background-image: url('../../assets/img/bgg.jpg');
+  background-image: url('../../assets/img/ttcc.jpg');
   background-size: cover; /* Điều chỉnh kích thước của hình nền */
   background-position: center; /* Căn chỉnh hình nền ở giữa */
   background-repeat: no-repeat; /* Đảm bảo hình nền không lặp lại */
+  image-rendering: -webkit-optimize-contrast; /* Tối ưu hóa độ tương phản */
+  image-rendering: crisp-edges; /* Hiển thị hình ảnh rõ ràng */
+  -webkit-backdrop-filter: blur(5px); /* Áp dụng hiệu ứng mờ phía sau */
+  backdrop-filter: blur(5px); /* Áp dụng hiệu ứng mờ phía sau */
+  filter: brightness(0.8) contrast(1.2); /* Điều chỉnh độ sáng và độ tương phản */
 }
 
 #garena {
@@ -91,4 +96,9 @@
     font-size: 16px; /* Tăng kích thước của text */
     line-height: 50px; /* Căn chỉnh text vào giữa nút */
   }
+}
+.image-container {
+  filter: brightness(1.2) contrast(1.2); /* Điều chỉnh độ sáng và độ tương phản */
+  image-rendering: crisp-edges; /* Hiển thị hình ảnh rõ ràng */
+  -webkit-backface-visibility: hidden; /* Ẩn mặt sau của hình ảnh */
 }

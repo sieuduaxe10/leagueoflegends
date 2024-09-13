@@ -4,6 +4,8 @@
   background-position: center;
   position: relative; /* Cần thiết để vị trí tương đối với con trực tiếp */
 }
+
+/* Phong cách cho màn hình lớn */
 .logo-image {
   width: 400px; /* Định kích thước chiều rộng */
   height: 200px; /* Giữ tỷ lệ khung hình tự động */
@@ -11,6 +13,7 @@
   margin-top: 20%;
 }
 
+/* Phong cách cho màn hình lớn */
 .button-container {
   display: flex;
   flex-direction: row; /* Hiển thị các phần tử con theo chiều dọc */
@@ -42,10 +45,7 @@
 .button__int {
   background-color: #212121;
   color: white;
-  selector {
-    font-weight: bold; /* In đậm */
-    font-weight: 300; 
-  }
+  font-weight: 600;
   border-radius: 0;
   padding: 10px 30px;
   transition: all 0.2s ease-in,
@@ -54,7 +54,6 @@
   border-bottom-right-radius 0.2s ease-in 0.3s,
   border-bottom-left-radius 0.2s ease-in 0.45s,
   padding 0.2s ease-in;
-  font-weight: 600;
   width: 165px;
   z-index: -1;
   box-shadow: -25px -10px 30px -5px rgba(225, 0, 255, 0.7),
@@ -82,11 +81,10 @@
     -15px 10px 30px -5px rgba(255, 230, 0.8);
 }
 
-
-h4,h6{
+h4, h6 {
   color: #f8f6f6;
 }
-  
+
 .power-bar {
   width: 300px;
   height: 20px;
@@ -99,11 +97,11 @@ h4,h6{
   background: linear-gradient(to right, red 0%, orange 14.3%, yellow 28.6%, green 42.9%, blue 57.2%, indigo 71.5%, violet 100%);
   height: 100%;
 }
+
 .power-filll {
   background: linear-gradient(to right, red 0%, rgb(0, 94, 255) 14.3%, rgb(0, 255, 251) 28.6%, green 42.9%, blue 57.2%, indigo 71.5%, violet 100%);
   height: 100%;
 }
-
 
 .power-text {
   position: absolute;
@@ -113,3 +111,24 @@ h4,h6{
   color: white;
 }
 
+/* Media Queries cho màn hình nhỏ */
+@media (max-width: 768px) {
+  .logo-image {
+    width: 80%; /* Điều chỉnh kích thước cho màn hình nhỏ */
+    height: auto; /* Giữ tỷ lệ khung hình tự động */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+  }
+
+  .button-container {
+    flex-direction: column; /* Chuyển hướng các phần tử thành cột */
+    align-items: center; /* Căn giữa các phần tử */
+  }
+
+  .button {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 20px;
+  }
+}

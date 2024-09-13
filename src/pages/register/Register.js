@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import huy from '../../assets/img/camile.gif';
 
+import './cs.css';
 
 import { Link } from 'react-router-dom';
 import { FaSignInAlt } from 'react-icons/fa'; // Import the icon component
@@ -33,95 +34,99 @@ const Login = () => {
       setHasInput(false);
     }
   };
-  
+
 
   return (
-    <div className="row g-5 align-items-center">
-      <div className="col-md-3">
-        <div id="login" className="login-form">
-          <div style={{ marginBottom: '50px', textAlign: 'center', }} className="">
-            <Link to="/" className="brand-wrap">
-              <img style={{ width: '200px', height: '300px' }} className="logo animate__animated animate__backInDown" src={Logo} alt="Logo" />
-            </Link>
-          </div>
-          <h1 style={{ textAlign: 'center', marginBottom: '20px', fontWeight: 'bold' }}>Đăng Kí</h1>
-          <form onSubmit={handleLogin}>
-            <div className="form-group">
-              <input
-                type="text"
-                id="username"
-                name="username"
-                value={username}
-                onChange={(e) => {
-                  setUsername(e.target.value);
-                  handleInputChange(); // Gọi hàm khi có thay đổi trong input
-                }}
-                className="form-control"
-                placeholder="Nhập tên người dùng"
-              />
-            </div>
-            <div className="form-group">
-              <input
-                type="password"
-                id="confirmPassword"
-                name="confirmPassword"
-                value={confirmPassword}
-                onChange={(e) => {
-                  setConfirmPassword(e.target.value);
-                  handleInputChange(); // Gọi hàm khi có thay đổi trong input
-                }}
-                className="form-control"
-                placeholder="Nhập lại mật khẩu"
-              />
-            </div>
-
-            <div className="form-group">
-              <input
-                type="password"
-                id="password"
-                name="password"
-                value={password}
-                onChange={(e) => {
-                  setPassword(e.target.value);
-                  handleInputChange(); // Gọi hàm khi có thay đổi trong input
-                }}
-                className="form-control"
-                placeholder="Nhập lại mật khẩu"
-              />
-            </div>
-            <div className="additional-links" style={{ marginTop: '30px', marginLeft: '20px' }}>
-              <label style={{ fontWeight: '500 ', color: 'black' }}>
-                <input
-
-                  type="checkbox"
-                  checked={forgotPasswordChecked}
-                  onChange={() => setForgotPasswordChecked(!forgotPasswordChecked)}
-
-                />
-                <span style={{ marginLeft: '10px' }}>Đồng ý Đăng Kí</span>
-              </label>
-            </div>
-
-
-            <div>
-              <Link  to={"/login"} type="submit" className={`btn btn-primary ${hasInput ? 'active' : ''}`} style={{ textAlign: 'center', width: '50%', marginLeft: '60px', marginTop: '30px' }}>
-                <FaSignInAlt style={{ verticalAlign: 'middle' }} />
+    <div id='Regis' className="container-fluid py-5">
+      <div className="row">
+        <div className="col-md-4">
+        </div>
+        <div  className="col-md-4">
+          <div  id="Reg" className="log">
+            <div style={{ marginBottom: '50px', textAlign: 'center', }} className="">
+              <Link to="/" className="brand-wrap">
+                <img style={{ width: '200px', height: '300px' }} className="logo animate__animated animate__backInDown" src={Logo} alt="Logo" />
               </Link>
             </div>
-          </form>
-          <br />
+            <h1 style={{ textAlign: 'center', marginBottom: '20px', fontWeight: 'bold' }}>Đăng Kí</h1>
+            <form onSubmit={handleLogin}>
+              <div className="form-group">
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  value={username}
+                  onChange={(e) => {
+                    setUsername(e.target.value);
+                    handleInputChange(); // Gọi hàm khi có thay đổi trong input
+                  }}
+                  className="form-control"
+                  placeholder="Nhập tên người dùng"
+                />
+              </div>
+              <div  className="form-group">
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  value={confirmPassword}
+                  onChange={(e) => {
+                    setConfirmPassword(e.target.value);
+                    handleInputChange(); // Gọi hàm khi có thay đổi trong input
+                  }}
+                  className="form-control"
+                  placeholder="Nhập  mật khẩu"
+                />
+              </div>
+
+              <div className="form-group">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  value={password}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                    handleInputChange(); // Gọi hàm khi có thay đổi trong input
+                  }}
+                  className="form-control"
+                  placeholder="Nhập lại mật khẩu"
+                />
+              </div>
+              <div className="additional-links" style={{ marginTop: '30px', marginLeft: '20px' }}>
+                <label style={{ fontWeight: '500 ', color: 'black' , }}>
+                  <input
+
+                    type="checkbox"
+                    checked={forgotPasswordChecked}
+                    onChange={() => setForgotPasswordChecked(!forgotPasswordChecked)}
+
+                  />
+                  <span style={{  textAlign: 'center' }}>Đồng ý Đăng Kí</span>
+                </label>
+              </div>
+
+
+              <div>
+                <Link to={"/login"} type="submit" className={`btn btn-primary ${hasInput ? 'active' : ''}`} style={{ textAlign: 'center', width: '50%', marginLeft: '80px', marginTop: '30px' }}>
+                  <FaSignInAlt style={{ verticalAlign: 'middle' }} />
+                </Link>
+              </div>
+            </form>
+            <br />
 
 
 
 
+          </div>
         </div>
+        <div className="col-md-4">
+        </div>
+
+
       </div>
 
-      <div className="col-md-9" >
-        <div className="image-container">
-        <img style={{ width: '110%', height: '100%' }} src={huy} alt="Hình ảnh" loading="lazy" />
-        </div>
-      </div>
+
     </div>
   );
 };

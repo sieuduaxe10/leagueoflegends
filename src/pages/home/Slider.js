@@ -2,8 +2,11 @@ import React from "react";
 import Threejs from "../home/3d"; // Import component for 3D rendering
 import "./Slider.css"; // Import your CSS file
 import Hinh from "../../assets/img/hq.png";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 const Slider = () => {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0); // Cuộn lên đầu trang mới
+};
   const power = 50; // Giá trị sức mạnh (đây chỉ là ví dụ, bạn có thể lấy giá trị này từ trạng thái của thành phần)
   const powerr = 75;
   const powerBarStyle = {
@@ -41,14 +44,14 @@ const Slider = () => {
 
                 <div >
                   <div  class="button-container">
-                    <Link  to="/register">
+                    <Link onClick={scrollToTop} to="/register">
                     <button class="button">
                       <div class="button__int">
                         <span class="button__span">Đăng Kí</span>
                       </div>
                     </button>
                     </Link>
-                    <Link to="/login">
+                    <Link onClick={scrollToTop}to="/login">
                     <button  class="button">
                       <div class="button__int">
                         <span class="button__span">Đăng Nhập</span>

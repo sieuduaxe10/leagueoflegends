@@ -6,6 +6,9 @@ import ReactImageMagnify from 'react-image-magnify';
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
 import { Link } from "react-router-dom";
+const scrollToTop = () => {
+	window.scrollTo(0, 0); // Cuộn lên đầu trang mới
+};
 const Content = () => {
 	const power = 50; // Giá trị sức mạnh (đây chỉ là ví dụ, bạn có thể lấy giá trị này từ trạng thái của thành phần)
 	const powerr = 75;
@@ -41,11 +44,15 @@ const Content = () => {
 			imageAlt: "Custom image"
 		});
 	}
+	const [isExpanded, setIsExpanded] = useState(false);
 
+	const toggleExpand = () => {
+		setIsExpanded(!isExpanded);
+	};
 	return (
 		<section className="section-name padding-y"  >
 			<div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '30px' }}>
-				<Link to="/SearchBar" style={{ textDecoration: 'none' }}>
+				<Link onClick={scrollToTop} to="/SearchBar" style={{ textDecoration: 'none' }}>
 					<button id="jj" className="button">
 						<span>Danh Sách Tướng</span>
 					</button>
@@ -123,17 +130,22 @@ const Content = () => {
 										<div style={powerFillStyle} className="power-fill"></div>
 										<div className="power-text">{power}%</div>
 									</div>
-									
+
 								</div>
 
-								<div class="right-column">
-									<p style={{ color: 'white', }}>
+								<div id="nd" className="right-column">
+									<p style={{ color: 'white' }} className={isExpanded ? "expanded-text" : ""}>
 										Từng là những người bảo hộ cao quý của Shurima để chống lại Hư Không,
 										Aatrox cùng đồng bọn cuối cùng lại trở thành một mối hiểm họa còn lớn hơn đối với cả Runeterra,
 										và chỉ bị đánh bại bằng món phép thuật khôn ngoan của nhân loại. Nhưng sau nhiều thế kỉ bị giam cầm,
 										Aatrox là kẻ đầu tiên một lần nữa tìm về với tự do, bằng cách vấy bẩn và biến đổi những kẻ ngu ngốc
 										dám cầm thử thứ vũ khí ma thuật chứa đựng linh hồn hắn. Giờ đây, với da thịt chiếm đoạt được, hắn quay trở lại Runeterra trong một hình hài khủng khiếp tương tự trước đây, tìm kiếm sự tàn sát và trả món hận thù năm xưa.
 									</p>
+									{!isExpanded && (
+										<button className="expand-button" onClick={toggleExpand}>
+											Xem thêm
+										</button>
+									)}
 								</div>
 							</div>
 						</form>

@@ -1,0 +1,81 @@
+
+
+#gf {
+  display: flex; /* Sử dụng flexbox để sắp xếp các phần tử con */
+  flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+  align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+  width: 100%; /* Chiếm hết chiều ngang */
+  height: auto; /* Chiều cao tự động */
+}
+
+.sec-container {
+  display: flex; /* Sử dụng flexbox để sắp xếp các phần tử con */
+  justify-content: space-around; /* Phân phối đều không gian giữa các phần tử */
+  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+  flex-flow: row nowrap; /* Sắp xếp các phần tử theo hàng và không cho phép xuống dòng */
+  width: 100%; /* Chiếm hết chiều ngang */
+}
+
+.bladeheader {
+  text-align: center;
+  margin-bottom: 20px; /* Khoảng cách dưới cho phần tiêu đề */
+  width: 100%; /* Chiếm hết chiều ngang */
+}
+
+.sec {
+  position: relative; /* Đặt vị trí tương đối để chứa các phần tử con có vị trí tuyệt đối */
+  width: 20%; /* Chiều rộng của mỗi phần tử .sec */
+  height: 300px; /* Chiều cao cố định của mỗi phần tử .sec */
+  text-align: center; /* Căn giữa văn bản bên trong phần tử .sec */
+  border-radius: 30px; /* Bo tròn các góc của phần tử .sec */
+  transition: transform 0.5s ease-in-out; /* Thêm hiệu ứng chuyển đổi mượt mà khi thay đổi kích thước */
+  overflow: hidden; /* Ẩn các phần tử con nằm ngoài phạm vi của phần tử .sec */
+  margin: 5px; /* Thêm khoảng cách nhỏ giữa các sec */
+}
+
+.sec .bg {
+  width: 100%; /* Chiều rộng của ảnh nền */
+  height: 100%; /* Chiều cao của ảnh nền */
+  object-fit: cover; /* Cắt ảnh để lấp đầy phần tử cha mà không làm thay đổi tỉ lệ gốc */
+  border-radius: 30px; /* Bo tròn các góc của ảnh nền */
+  transition: transform 0.5s ease-in-out; /* Thêm hiệu ứng chuyển đổi mượt mà khi thay đổi kích thước */
+}
+
+.character-container {
+  position: absolute; /* Đặt vị trí tuyệt đối để căn chỉnh chính xác bên trong phần tử cha */
+  top: 0; /* Đặt phần tử ở đầu phần tử cha */
+  left: 0; /* Đặt phần tử ở bên trái phần tử cha */
+  width: 100%; /* Chiều rộng chiếm toàn bộ phần tử cha */
+  height: 100%; /* Chiều cao chiếm toàn bộ phần tử cha */
+  display: flex; /* Sử dụng flexbox để sắp xếp các phần tử con */
+  flex-direction: column; /* Sắp xếp các phần tử con theo chiều dọc */
+  justify-content: center; /* Căn giữa các phần tử con theo chiều dọc */
+  align-items: center; /* Căn giữa các phần tử con theo chiều ngang */
+  opacity: 0; /* Đặt độ mờ ban đầu của phần tử */
+  z-index: 10; /* Đặt z-index cao hơn để hiển thị trên ảnh nền */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Thêm hiệu ứng chuyển đổi mượt mà khi thay đổi độ mờ và kích thước */
+}
+
+.sec .character {
+  width: 50%; /* Chiều rộng của ảnh nhân vật */
+  height: auto; /* Chiều cao chiếm toàn bộ phần tử cha */
+  object-fit: cover; /* Cắt ảnh để lấp đầy phần tử cha mà không làm thay đổi tỉ lệ gốc */
+  border-radius: 30px; /* Bo tròn các góc của ảnh */
+}
+
+.sec .title {
+  margin-top: -10px; /* Đặt khoảng cách trên của tiêu đề */
+  color: #fff; /* Màu chữ trắng */
+  font-size: 20px; /* Kích thước chữ */
+}
+.sec.bg1:hover .character-container,
+.sec.bg2:hover .character-container,
+.sec.bg3:hover .character-container,
+.sec.bg4:hover .character-container {
+  opacity: 1; /* Tăng độ mờ để hiển thị phần tử khi hover */
+  transform: scale(1.1) translateY(-10px); /* Phóng to và di chuyển phần tử lên trên khi hover */
+}
+
+.sec:hover {
+  transform: scale(1.1); /* Phóng to phần tử khi hover */
+}

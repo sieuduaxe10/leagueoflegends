@@ -8,7 +8,7 @@ import Login from "../pages/login/Login";
 function login(props) {
     return (
         
-        <div class="container"> 
+        <div class=""> 
         <Login/>
         </div>
      

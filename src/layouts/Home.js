@@ -4,6 +4,8 @@ import Skin from "../pages/home/skin";
 import Play from "../pages/home/Play";
 import News from "../pages/home/news";
 import Garena from "../pages/home/general";
+import CardAnimation from "../pages/home/CardAnimation ";
+
 function Home(props) {
     return (
         <div className="">
@@ -22,6 +24,9 @@ function Home(props) {
             </div>
             <div style={{ marginTop: '10px'  }}> {/* Tạo khoảng cách 20px */}
                 <Play />
+            </div>
+            <div style={{ marginTop: '30px'  }}> {/* Tạo khoảng cách 20px */}
+                <CardAnimation />
             </div>
         </div>
     );

@@ -17,7 +17,7 @@ const Skin = () => {
     useEffect(() => {
         const intervalId = setInterval(() => {
             setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 2000); // Thay đổi hình ảnh mỗi 2 giây
+        }, 10000); // Thay đổi hình ảnh mỗi 2 giây
 
         // Xóa bộ hẹn giờ khi component unmount
         return () => clearInterval(intervalId);
@@ -35,7 +35,7 @@ const Skin = () => {
 
 
                 <div className="col-md-7">
-                <div style={{marginTop:'10px'}} className="image-wrapper">
+                <div style={{marginTop:'20px'}} className="image-wrapper">
                     <img style={{ width: '75%' }} src={images[currentImageIndex]} className="image" alt="Slider Image" />
                 </div>
                 </div>

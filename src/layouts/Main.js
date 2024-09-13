@@ -9,7 +9,7 @@ import Update from "../pages/chitiet/detailup";
 import SearchBar from "../pages/home/SearchBar";
 
 const Main=()=>(
-   <main >
+   <main style={{ marginTop: '10px'  }} >
    <Routes>
 
    <Route path="/"element={<Home/>}/>  

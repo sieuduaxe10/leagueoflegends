@@ -6,12 +6,15 @@ import AatroxQ from '../../assets/img/AatroxQ.png';
 import AatroxW from '../../assets/img/AatroxW.png';
 import Aatrox_Passive from '../../assets/img/Aatrox_Passive.png';
 import AatroxR from '../../assets/img/AatroxR.png';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 import 'animate.css';
 import './update.css'
 
 const Skin = () => {
+    const scrollToTop = () => {
+        window.scrollTo(0, 0); // Cuộn lên đầu trang mới
+    };
     return (
         <section style={{ background: '#525252' }}>
             <div id='update' >
@@ -28,7 +31,7 @@ const Skin = () => {
                     <header style={{ color: 'white', marginTop: '50px', textTransform: 'uppercase', fontWeight: 'bold', fontSize: 'xx-large' }}>TIÊU ĐIỂM CẬP NHẬT</header>
                     <div style={{ textAlign: 'center', border: '1px solid #ccc', padding: '20px', borderRadius: '10px' }}>
                         <span className="content-border">
-                            <Link to="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt323cd456fdf5d3a2/6631e2d2cb2cbb32d9d6d07f/LOL_14.9_Patch-Highlights_TW_1920x1080_VN.jpg" target="_blank" className="skins cboxElement">
+                            <Link onClick={scrollToTop}to="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt323cd456fdf5d3a2/6631e2d2cb2cbb32d9d6d07f/LOL_14.9_Patch-Highlights_TW_1920x1080_VN.jpg" target="_blank" className="skins cboxElement">
                                 <img style={{ display: 'block', margin: '0 auto', width: '70%', height: '500px' }} src={Lol} alt="Akali 1" />
                             </Link>
                         </span>
@@ -47,7 +50,7 @@ const Skin = () => {
                             <li>Danh Hiệu Tướng có thể được mở khóa ở Thông Thạo Cấp 10</li>
                         </ul>
                         <span className="content-border">
-                            <Link to="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blte27e4694105acee0/663c156670ebba24bfab966a/CMU_DEMO.png?disposition=inline" target="_blank" className="skins cboxElement">
+                            <Link onClick={scrollToTop}to="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blte27e4694105acee0/663c156670ebba24bfab966a/CMU_DEMO.png?disposition=inline" target="_blank" className="skins cboxElement">
                                 <img style={{ display: 'block', margin: '0 auto', width: '50%', height: '500px' }} src={DEmo} alt="Akali 1" />
                             </Link>
                         </span>
@@ -56,11 +59,11 @@ const Skin = () => {
                 <div>
                     <header style={{ color: 'white', marginTop: '50px', textTransform: 'uppercase', fontWeight: 'bold', fontSize: 'xx-large' }}>TƯỚNG</header>
                     <div style={{ border: '1px solid #ccc', padding: '20px', borderRadius: '10px', color: 'white' }}>
-                        <div style={{ display: 'flex', alignItems: 'center' }}> <Link to="/Detail" class="reference-link">
+                        <div style={{ display: 'flex', alignItems: 'center' }}> <Link onClick={scrollToTop}to="/Detail" class="reference-link">
                             <img src="https://cdn.mobalytics.gg/assets/tft/images/champions/icons/set9-5/aatrox.png?v=5" />
                         </Link>
                             <h3 style={{ marginLeft: '20px' }} id="patch-corki" class="change-title">
-                                <Link style={{ marginLeft: '20px', textDecoration: 'none', color: '#fcd34d' }} to="/Detail">AATROX</Link>
+                                <Link onClick={scrollToTop}style={{ marginLeft: '20px', textDecoration: 'none', color: '#fcd34d' }} to="/Detail">AATROX</Link>
                             </h3></div>
 
 

@@ -99,8 +99,24 @@
   .right-column {
       flex: 1; /* Mỗi cột chiếm một nửa chiều rộng của khung */
       padding: 10px; /* Thêm khoảng đệm bên trong cột */
+    
+  }
+  #nd p{
+    display:-webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .expand-button {
+    color: #f37f12;
+    cursor: pointer;
+    margin-top: 10px;
   }
   
+  .expanded-text {
+    display: block !important;
+    -webkit-line-clamp: unset !important;
+  }
   .left-column {
       border-right: 1px solid #ccc; /* Đường kẻ giữa ở bên phải cột trái */
   }

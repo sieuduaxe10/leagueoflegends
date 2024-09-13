@@ -8,7 +8,7 @@ import Register from "../pages/register/Register";
 function register(props) {
     return (
         
-        <div class="container"> 
+        <div class=""> 
         <Register/>
         </div>
      

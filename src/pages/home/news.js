@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import './new.css'; // Import custom CSS file
 import { GET_PAGE } from '../../api/apiService'; // Đảm bảo đúng đường dẫn tới api.js
 
 const News = () => {
+    const scrollToTop = () => {
+        window.scrollTo(0, 0); // Cuộn lên đầu trang mới
+    };
     const [products, setProducts] = useState([]);
     const [isVideoPlaying, setIsVideoPlaying] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
@@ -75,7 +78,7 @@ const News = () => {
                                     </div>
                                 </div>
                             ) : (
-                                <Link to='/Update' style={{ textDecoration: 'none', width: '100%' }}>
+                                <Link onClick={scrollToTop}to='/Update' style={{ textDecoration: 'none', width: '100%' }}>
                                     <div className="image-container">
                                         <img src={`./assets/img/${product.src}`} alt={product.alt} className="product-image" style={{ width: '100%' }} />
                                         <div className="product-info">

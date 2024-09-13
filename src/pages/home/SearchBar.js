@@ -20,7 +20,9 @@ import 'animate.css';
 function SearchBar() {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedPosition, setSelectedPosition] = useState(''); // Trạng thái để lưu trữ vị trí được chọn
-
+    const scrollToTop = () => {
+        window.scrollTo(0, 0); // Cuộn lên đầu trang mới
+    };
     // Danh sách sản phẩm
     const products = [
         { id: 1, name: 'AATROX', image: Topp, position: 'support' },
@@ -82,7 +84,10 @@ function SearchBar() {
                                 className="input"
                                 placeholder="Tìm Kiếm"
                                 value={searchQuery}
-                                onChange={handleSearchChange} />
+                                onChange={handleSearchChange}
+                               
+                                />
+                                
                             <span className="icon">
                                 <svg width="19px" height="19px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="1" d="M14 5H20" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="1" d="M14 8H17" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="1" d="M22 22L20 20" stroke="#000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                             </span>
@@ -162,7 +167,7 @@ function SearchBar() {
                         <div key={product.id} className="col-md-6 col-lg-3" style={{ marginTop: '20px' }}>
                             <div className="rounded position-relative fruite-item">
                                 <div className="fruite-img">
-                                    <Link to="/Detail">
+                                    <Link onClick={scrollToTop}to="/Detail">
                                         <img style={{ height: '300px' }} src={product.image} className="img-fluid w-100 rounded-top" alt={product.name} />
                                     </Link>
                                 </div>

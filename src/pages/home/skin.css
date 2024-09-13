@@ -4,11 +4,18 @@
     to { opacity: 0; }
 }
 #hinh {
-    background-image: url('../../assets/img/gg.gif');
-    background-size: cover; /* Điều chỉnh kích thước của hình nền */
-    background-position: center; /* Căn chỉnh hình nền ở giữa */
-    background-repeat: no-repeat; /* Đảm bảo hình nền không lặp lại */
+    background-image: url('../../assets/img/ali.webp');
+    background-size: cover; /* Đảm bảo kích thước hình nền được điều chỉnh để lấp đầy phần tử */
+    background-position: center; /* Căn chỉnh hình nền vào giữa */
+    background-repeat: no-repeat; /* Đảm bảo hình nền không được lặp lại */
+    height: 100vh; /* Thiết lập chiều cao của phần tử là 100% chiều cao của viewport */
+    image-rendering: -webkit-optimize-contrast; /* Tối ưu hóa độ tương phản */
+    image-rendering: crisp-edges; /* Hiển thị hình ảnh rõ ràng */
+    -webkit-backdrop-filter: blur(5px); /* Áp dụng hiệu ứng mờ phía sau */
+    backdrop-filter: blur(5px); /* Áp dụng hiệu ứng mờ phía sau */
+    filter: brightness(0.8) contrast(1.2); /* Điều chỉnh độ sáng và độ tương phản */
 }
+
 
 
 /* Áp dụng hoạt cảnh cho ảnh */
@@ -49,10 +56,10 @@
     border: 4px solid #ccc; /* Mặc định khung có màu xám nhạt */
     border-radius: 6%; /* Tùy chọn, tạo góc bo tròn */
     padding: 6px; /* Khoảng trống giữa hình ảnh và khung */
-    width: 55%; /* Đặt chiều rộng cho khung */
+    width: 60%; /* Đặt chiều rộng cho khung */
     margin: 0 auto; /* Căn giữa khung trong khối chứa */
     transform: rotate(15deg); /* Xoay khung theo góc 15 độ */
-
+   text-align: center;
     /* Áp dụng hiệu ứng chuyển động màu sắc */
-    animation: borderColorChange 3s infinite; /* Chạy hiệu ứng mỗi 3 giây và lặp lại vô hạn */
+    animation: borderColorChange 6s infinite; /* Chạy hiệu ứng mỗi 3 giây và lặp lại vô hạn */
 }
